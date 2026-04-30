@@ -1,739 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>🌿 RV Yard Works — Lawn, Landscaping & More</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
-<style>
-  :root {
-    --green-dark:  #1a4a2e;
-    --green-mid:   #2d6e45;
-    --green-light: #4a9e65;
-    --gold:        #f0a500;
-    --gold-light:  #f7c900;
-    --cream:       #faf7f0;
-    --ink:         #111710;
-    --mist:        #e8ede5;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 - Website Not Found</title>
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Lato', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    overflow-x: hidden;
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  /* ─── NAV ─── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 3rem;
-    background: rgba(26,74,46,0.96);
-    backdrop-filter: blur(10px);
-  }
-  .nav-brand {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .nav-phone {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-
-  .nav-phone2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    margin-left: 15px;
-    text-transform: capitalize;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-
-
-  .nav-phone2:hover { color: var(--gold); }
-  .nav-phone2::before { content: '📧'; font-size: 1.7rem; }
-
-  .nav-phone:hover { color: var(--gold); }
-  .nav-phone::before { content: '📞'; font-size: 1rem; }
-
-  /* ─── HERO ─── */
-  .hero {
-    min-height: 100vh;
-    background: var(--green-dark);
-    position: relative;
-    display: flex; align-items: center;
-    overflow: hidden;
-    padding-top: 5rem;
-  }
-
-  /* Grass blades background pattern */
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      repeating-linear-gradient(
-        175deg,
-        transparent 0px, transparent 3px,
-        rgba(74,158,101,0.06) 3px, rgba(74,158,101,0.06) 4px
-      ),
-      repeating-linear-gradient(
-        185deg,
-        transparent 0px, transparent 5px,
-        rgba(45,110,69,0.08) 5px, rgba(45,110,69,0.08) 6px
-      );
-  }
-
-  /* Big sun circle */
-  .hero-sun {
-    position: absolute;
-    right: -80px; top: 50%;
-    transform: translateY(-50%);
-    width: 700px; height: 700px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 40% 40%, var(--gold-light), var(--gold) 60%, #c47e00);
-    opacity: 0.18;
-  }
-
-  .hero-content {
-    position: relative; z-index: 2;
-    padding: 4rem 3rem 4rem 5rem;
-    max-width: 700px;
-  }
-
-  .hero-eyebrow {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.25rem;
-    display: flex; align-items: center; gap: 0.75rem;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 40px; height: 2px;
-    background: var(--gold);
-  }
-
-  .hero-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(4rem, 7.5vw, 8.5rem);
-    font-weight: 700;
-    line-height: 0.9;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.25rem;
-  }
-  .hero-title .accent { color: var(--gold); display: block; }
-
-  .hero-tagline {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.65);
-    font-weight: 300;
-    line-height: 1.65;
-    max-width: 420px;
-    margin: 1.75rem 0 2.5rem;
-  }
-
-  .hero-cta-row {
-    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
-  }
-  .btn {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    padding: 0.9rem 2.25rem;
-    border-radius: 4px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer; border: none;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-  }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-gold {
-    background: var(--gold);
-    color: var(--ink);
-    box-shadow: 0 6px 20px rgba(240,165,0,0.35);
-  }
-  .btn-gold:hover { background: var(--gold-light); box-shadow: 0 10px 28px rgba(240,165,0,0.45); }
-  .btn-outline {
-    background: transparent;
-    border: 2px solid rgba(255,255,255,0.35);
-    color: #fff;
-  }
-  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
-
-  /* ─── SERVICES STRIP ─── */
-  .services-strip {
-    background: var(--gold);
-    padding: 1rem 3rem;
-    display: flex; gap: 3rem; align-items: center;
-    justify-content: center; flex-wrap: wrap;
-    overflow: hidden;
-  }
-  .strip-item {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink);
-    display: flex; align-items: center; gap: 0.5rem;
-    white-space: nowrap;
-  }
-  .strip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-dark); }
-
-  /* ─── SERVICES SECTION ─── */
-  .services {
-    padding: 7rem 5rem;
-    background: var(--cream);
-  }
-  .section-header {
-    text-align: center;
-    margin-bottom: 4.5rem;
-  }
-  .section-eyebrow {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--green-mid);
-    margin-bottom: 0.75rem;
-  }
-  .section-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1;
-    color: var(--ink);
-  }
-  .section-title span { color: var(--green-mid); }
-  .section-rule {
-    width: 60px; height: 3px;
-    background: var(--gold);
-    margin: 1.25rem auto 0;
-    border-radius: 2px;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .service-card {
-    background: #fff;
-    border-radius: 16px;
-    display: flex; flex-direction: column;
-    border: 1px solid var(--mist);
-    box-shadow: 0 2px 12px rgba(26,74,46,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(26,74,46,0.14);
-  }
-
-  .service-photo {
-    width: 100%; height: 220px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  .service-card:hover .service-photo { transform: scale(1.04); }
-
-  .service-photo-wrap {
-    overflow: hidden;
-    position: relative;
-    border-radius: 16px 16px 0 0;
-  }
-  .service-photo-badge {
-    position: absolute;
-    top: 1rem; left: 1rem;
-    background: var(--gold);
-    color: var(--ink);
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-  }
-
-  .service-body {
-    padding: 1.75rem 2rem 2rem;
-    display: flex; flex-direction: column; gap: 0.5rem;
-    flex: 1;
-  }
-  .service-icon-row {
-    display: flex; align-items: center; gap: 0.75rem;
-    margin-bottom: 0.25rem;
-  }
-  .service-icon-wrap {
-    width: 44px; height: 44px;
-    border-radius: 10px;
-    background: var(--green-dark);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.25rem;
-    flex-shrink: 0;
-    transition: background 0.3s;
-  }
-  .service-card:hover .service-icon-wrap { background: var(--gold); }
-
-  .service-name {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--ink);
-    letter-spacing: 0.03em;
-  }
-  .service-desc {
-    font-size: 0.88rem;
-    color: #666;
-    line-height: 1.65;
-    font-weight: 300;
-  }
-  .service-features {
-    margin-top: 0.75rem;
-    display: flex; flex-wrap: wrap; gap: 0.4rem;
-  }
-  .service-tag {
-    background: var(--mist);
-    color: var(--green-dark);
-    border-radius: 20px;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  /* ─── WHY US ─── */
-  .why {
-    background: var(--green-dark);
-    padding: 7rem 5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .why::after {
-    content: '';
-    position: absolute;
-    right: -100px; bottom: -100px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(240,165,0,0.1), transparent 70%);
-  }
-  .why .section-eyebrow { color: var(--gold); }
-  .why .section-title { color: #fff; }
-  /* .why .section-rule { margin: 1.25rem 0 0; } */
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
-    max-width: 1000px;
-    margin-left: auto; margin-right: auto;
-  }
-  .why-card {
-    text-align: center;
-    padding: 2.5rem 1.5rem;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    transition: background 0.3s;
-  }
-  .why-card:hover { background: rgba(255,255,255,0.1); }
-  .why-num {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-  .why-label {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #fff;
-    margin-bottom: 0.75rem;
-  }
-  .why-text { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; font-weight: 300; }
-
-  /* ─── CTA BAND ─── */
-  .cta-band {
-    background: var(--gold);
-    padding: 5rem 5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-band::before {
-    content: '🌿';
-    position: absolute; left: 5%; top: 50%; transform: translateY(-50%);
-    font-size: 8rem; opacity: 0.12;
-  }
-  .cta-band::after {
-    content: '🌿';
-    position: absolute; right: 5%; top: 50%; transform: translateY(-50%) scaleX(-1);
-    font-size: 8rem; opacity: 0.12;
-  }
-  .cta-band h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--ink);
-    line-height: 1;
-    margin-bottom: 0.75rem;
-  }
-  .cta-band p {
-    font-size: 1.05rem;
-    color: rgba(17,23,16,0.65);
-    margin-bottom: 2rem;
-    font-weight: 300;
-  }
-  .btn-dark {
-    background: var(--green-dark);
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(26,74,46,0.35);
-  }
-  .btn-dark:hover { background: var(--green-mid); box-shadow: 0 10px 28px rgba(26,74,46,0.45); }
-
-  /* ─── FOOTER ─── */
-  footer {
-    background: var(--ink);
-    padding: 3rem 5rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
-    align-items: center;
-  }
-  .footer-brand {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-  }
-  .footer-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.4); font-weight: 300; }
-  .footer-info { text-align: right; }
-  .footer-phone {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 0.25rem;
-  }
-  .footer-phone:hover { color: var(--gold); }
-  .footer-services { font-size: 0.75rem; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; }
-  .footer-copy {
-    grid-column: 1 / -1;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 1.25rem;
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.25);
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
- .footer-insta {
-	display: flex;
-	justify-content: end;
-	align-items: center;
-	padding-bottom: 10px;
-}
-  .footer-insta img {
-	height: 25px;
-	margin-right: 8px;
-}
-
-  /* ─── SCROLL REVEAL ─── */
-  .reveal {
-    opacity: 0; transform: translateY(28px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
-
-  /* ─── HERO ANIMATION ─── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: none; }
-  }
-  .hero-eyebrow { animation: fadeUp 0.7s 0.1s ease both; }
-  .hero-title   { animation: fadeUp 0.7s 0.2s ease both; }
-  .hero-tagline { animation: fadeUp 0.7s 0.35s ease both; }
-  .hero-cta-row { animation: fadeUp 0.7s 0.5s ease both; }
-
-  @keyframes sunrise {
-    from { opacity: 0; transform: translateY(-50%) scale(0.7); }
-    to   { opacity: 0.18; transform: translateY(-50%) scale(1); }
-  }
-  .hero-sun { animation: sunrise 1.2s 0.2s ease both; }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.25rem;
-    display: block;
-    }
-    .nav-phone {
-      font-size: 0.85rem;
-      display: none;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .nav-phone2 {
-      font-size: 0.85rem;
-      display: none;
+    body {
+      height: 100vh;
+      background: #eee;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
-   .btn.btn-dark {
-      margin-bottom: 15px;
-      margin-left: 0px !important;
+    .container {
+      max-width: 500px;
+      padding: 20px;
     }
 
-    .footer-insta {
-      justify-content: start;
+    h1 {
+      font-size: 120px;
+      font-weight: 600;
+      color: #2e7d32;
     }
 
+    h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
 
-    .nav-brand { font-size: 1rem; }
-    .hero-content { padding: 3rem 1.5rem; }
-    .services, .why, .cta-band { padding: 5rem 1.5rem; }
-    .services-grid { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
-    footer { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; }
-    .footer-info { text-align: left; }
-    .services-strip { gap: 1.5rem; padding: 1rem 1.5rem; }
-  }
-</style>
+    p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      font-size: 15px;
+      color: #2e7d32;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: 0.3s ease;
+    }
+
+   
+
+    .illustration {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
+    <div class="illustration">🌿</div>
+    <h1>404</h1>
+    <h2>Website Not Found</h2>
+    <p>The Website you're looking for might have been removed or is temporarily unavailable.</p>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-brand">RV Yard Works</div>
-  <div style="display: flex;">
-    <a class="nav-phone" href="tel:6136615130">613-661-5130</a>
-    <a class="nav-phone2" href="tel:6136615130">Virkj5549@gmail.com</a>
+    <p class="contact">
+      Connect with Admin
+  </p>
   </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-sun"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Belleville's Trusted Outdoor Crew</div>
-    <h1 class="hero-title">
-      WE GET 
-
-      <span class="accent">IT DONE.</span>
-    </h1>
-    <p class="hero-tagline">From freshly cut lawns to polished concrete and winter snow removal — RV Yard Works keeps your property looking its best, every season.</p>
-    <div class="hero-cta-row">
-      <a class="btn btn-gold" href="tel:6136615130">Call Now — 613-661-5130</a>
-      <a class="btn btn-outline" href="#services">Our Services ↓</a>
-    </div>
-  </div>
-</section>
-
-<!-- STRIP -->
-<div class="services-strip">
-  <div class="strip-item"><div class="strip-dot"></div> Lawn Maintenance</div>
-  <div class="strip-item"><div class="strip-dot"></div> New Grass Installation</div>
-  <div class="strip-item"><div class="strip-dot"></div> Concrete Pads</div>
-  <div class="strip-item"><div class="strip-dot"></div> Driveways Sealing</div>
-  <div class="strip-item"><div class="strip-dot"></div> Snow Removal</div>
-</div>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="section-header reveal">
-    <div class="section-eyebrow">What We Do</div>
-    <h2 class="section-title">Our <span>Services</span></h2>
-    <div class="section-rule"></div>
-  </div>
-
-  <div class="services-grid">
-
-    <!-- Lawn Maintenance -->
-    <div class="service-card reveal reveal-delay-1">
-      <div class="service-photo-wrap">
-        <img class="service-photo" src="https://plus.unsplash.com/premium_photo-1747911361940-5188c161ff7b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lawn Mowing" onerror="this.style.background='#2d6e45';this.style.height='220px';this.removeAttribute('src')"/>
-        <div class="service-photo-badge">Lawn Maintenance </div>
-      </div>
-      <div class="service-body">
-        <div class="service-icon-row">
-          <div class="service-icon-wrap">🌿</div>
-          <div class="service-name">Lawn Maintenance </div>
-        </div>
-        <p class="service-desc">Regular, reliable mowing that keeps your grass at the perfect height. We handle residential and commercial properties with clean edges and a crisp finish every time.</p>
-       
-      </div>
-    </div>
-
-    <!-- New Grass Installation -->
-    <div class="service-card reveal reveal-delay-2">
-      <div class="service-photo-wrap">
-        <img class="service-photo" src="https://plus.unsplash.com/premium_photo-1661411427541-d4459b1bed64?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3Jhc3MlMjBpbnN0YWxsfGVufDB8fDB8fHww" alt="Landscaping" onerror="this.style.background='#1a4a2e';this.style.height='220px';this.removeAttribute('src')"/>
-        <div class="service-photo-badge">New Grass Installation</div>
-      </div>
-      <div class="service-body">
-        <div class="service-icon-row">
-          <div class="service-icon-wrap">🌳</div>
-          <div class="service-name">New Grass Installation</div>
-        </div>
-        <p class="service-desc">Transform your outdoor space with professional landscaping — from garden bed design and planting to grading and full yard makeovers that boost curb appeal.</p>
-       
-      </div>
-    </div>
-
-    <!-- Concrete Pads -->
-    <div class="service-card reveal reveal-delay-3">
-      <div class="service-photo-wrap">
-        <img class="service-photo" src="https://images.unsplash.com/photo-1534503442463-e0ddba45cf4c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Concrete Pouring" onerror="this.style.background='#888';this.style.height='220px';this.removeAttribute('src')"/>
-        <div class="service-photo-badge">Concrete Pads</div>
-      </div>
-      <div class="service-body">
-        <div class="service-icon-row">
-          <div class="service-icon-wrap">🏗️</div>
-          <div class="service-name">Concrete Pads</div>
-        </div>
-        <p class="service-desc">Driveways, walkways, patios, and pads poured with precision. We deliver clean, durable concrete work that stands up to Canadian winters and looks great year-round.</p>
-       
-      </div>
-    </div>
-
-    <!-- Driveways Sealing -->
-    <div class="service-card reveal reveal-delay-4">
-      <div class="service-photo-wrap">
-        <img class="service-photo" src="https://cdn.pixabay.com/photo/2024/08/19/23/46/construction-8981663_1280.png" alt="Snow Removal" onerror="this.style.background='#b0c8d8';this.style.height='220px';this.removeAttribute('src')"/>
-        <div class="service-photo-badge">Driveways Sealing</div>
-      </div>
-      <div class="service-body">
-        <div class="service-icon-row">
-          <div class="service-icon-wrap">🛣️</div>
-          <div class="service-name">Driveways Sealing</div>
-        </div>
-        <p class="service-desc">Protect your driveway before damage sets in. Our sealing keeps surfaces sealed, weather-resistant, and clean — so your home always looks well-maintained and built to last.</p>
-        
-      </div>
-    </div>
-
-    <!-- Snow Removal -->
-    <div class="service-card reveal reveal-delay-4">
-      <div class="service-photo-wrap">
-        <img class="service-photo" src="https://images.unsplash.com/photo-1611194625888-3c6621587ee4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c25vdyUyMHJlbW92YWx8ZW58MHx8MHx8fDA%3D" alt="Snow Removal" onerror="this.style.background='#b0c8d8';this.style.height='220px';this.removeAttribute('src')"/>
-        <div class="service-photo-badge">Snow Removal</div>
-      </div>
-      <div class="service-body">
-        <div class="service-icon-row">
-          <div class="service-icon-wrap">❄️</div>
-          <div class="service-name">Snow Removal</div>
-        </div>
-        <p class="service-desc">Don't let winter slow you down. We clear driveways, walkways, and parking areas fast — so you're never stuck shovelling before work on a cold Belleville morning.</p>
-        
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- WHY US -->
-<section class="why">
-  <div class="section-header reveal">
-    <div class="section-eyebrow">Why RV Yard Works?</div>
-    <h2 class="section-title" style="color:#fff">Built on <span style="color:var(--gold)">Results</span></h2>
-    <div class="section-rule"></div>
-  </div>
-  <div class="why-grid">
-    <div class="why-card reveal reveal-delay-1">
-      <div class="why-num">4</div>
-      <div class="why-label">Seasons of Service</div>
-      <div class="why-text">We work year-round — lawn season or snowstorm, we show up and get the job done right.</div>
-    </div>
-    <div class="why-card reveal reveal-delay-2">
-      <div class="why-num">📞</div>
-      <div class="why-label">Easy to Reach</div>
-      <div class="why-text">One call and query and we're on it. Quick responses, clear pricing, no runaround.</div>
-    </div>
-    <div class="why-card reveal reveal-delay-3">
-      <div class="why-num">100%</div>
-      <div class="why-label">Local & Reliable</div>
-      <div class="why-text">Belleville-based and proud of it. We care about our community and our reputation shows it.</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section class="cta-band">
-  <h2>Ready for a Better Yard?</h2>
-  <p>Get a free quote today — we'll take care of the rest.</p>
-  <a style="margin-left: 15px;" class="btn btn-dark" href="tel:6136615130">📞 Call 613-661-5130</a>
-  <a class="btn btn-dark" style="text-transform: capitalize;" href="tel:6136615130">📧 Virkj5549@gmail.com</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-brand">RV Yard Works</div>
-    <div class="footer-tagline">Belleville's outdoor property experts</div>
-  </div>
-  <div class="footer-info">
-    <div class="footer-insta">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
-     <a class="footer-phone" href="https://www.instagram.com/rvyardworks/">RVYARDWORKS</a>
-    </div>
-  
-    <div class="footer-services">Lawn · New Grass · Concrete Pads · Driveways · Snow Removal</div>
-
-  </div>
-  <div class="footer-copy">© 2026 RV Yard Works. All rights reserved.</div>
-</footer>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
 </body>
 </html>
